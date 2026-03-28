@@ -8,7 +8,7 @@
 
 Before running the script, install the required dependency:
 
-​```bash
+​```
 pip install requests
 ​```
 
@@ -48,6 +48,6 @@ If your CSV's table headers don't start on the very first row, you'll need to ad
 
 Once configured, run the script from the directory containing both the script and `RD1_scores.csv`:
 
-​```bash
+​```
 python script.py
 ​```
