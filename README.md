@@ -1,17 +1,53 @@
-# CyberPatriot-Tier-Placement-Script
-For all of you that worry about your Tier placements during Round 2, this script will figure it out for you. \
-Make sure that the Round 1 Final Scores CSV is saved with the filename of RD1_scores.csv.
+# CyberPatriot Tier Placement Script
 
+**Automatically determine your tier placement for Round 2 based on Round 1 Final Scores.**
 
+---
 
-To get the csv file you must - \
-Convert the RD1 final scores xlsx file provided by AFA CyberPatriot at https://www.uscyberpatriot.org/competition/current-competition/scores to a csv. \
-You can use a tool like https://www.freeconvert.com to achieve this. \
-Rename the csv to RD1_scores.csv
+## Prerequisites
 
-Make sure to install the requirements and keep the Round 1 Final scores saved as a CSV in the same directory as the script. \
-Command to install requirements: pip install requests
+Before running the script, install the required dependency:
 
-Within the script you may adjust the DIVISION_TO_ANALYZE and CSV_HEADER_ROW_COUNT variables based on your use case. \
-The DIVISION_TO_ANALYZE variable is used to change the division you are in (Open, AFJROTC, etc.). \
-The CSV_HEADER_ROW_COUNT is used to change where the script actually starts reading the csv. Depending on the way your csv is formatted, the table headers may not be on the first row. Utilize this variable to fix it, for example, if the table starts on the 9th row, you would skip 9-1=8 rows, and that would be your value for this variable.
+​```bash
+pip install requests
+​```
+
+---
+
+## Setup
+
+1. **Get the Round 1 Final Scores file**
+   - Visit the [CyberPatriot scores page](https://www.uscyberpatriot.org/competition/current-competition/scores) and download the Round 1 Final Scores `.xlsx` file provided by AFA CyberPatriot.
+
+2. **Convert to CSV**
+   - Convert the `.xlsx` file to `.csv` using a tool like [freeconvert.com](https://www.freeconvert.com).
+
+3. **Rename the file**
+   - Save the converted file as `RD1_scores.csv` in the **same directory as the script**.
+
+---
+
+## Configuration
+
+Inside the script, two variables can be adjusted to match your use case:
+
+| Variable | Description |
+|---|---|
+| `DIVISION_TO_ANALYZE` | Set this to your division (e.g., `Open`, `AFJROTC`). |
+| `CSV_HEADER_ROW_COUNT` | Set this to the number of rows to skip before the table headers begin. |
+
+### Finding the right `CSV_HEADER_ROW_COUNT` value
+
+If your CSV's table headers don't start on the very first row, you'll need to adjust this value. Subtract 1 from the row number where the table starts.
+
+> **Example:** If the table starts on row 9, set `CSV_HEADER_ROW_COUNT = 8`.
+
+---
+
+## Usage
+
+Once configured, run the script from the directory containing both the script and `RD1_scores.csv`:
+
+​```bash
+python script.py
+​```
