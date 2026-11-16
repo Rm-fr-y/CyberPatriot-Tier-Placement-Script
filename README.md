@@ -17,7 +17,7 @@ pip install requests
 ## Setup
 
 1. **Get the Round 1 Final Scores file**
-   - Visit the [CyberPatriot scores page](https://www.uscyberpatriot.org/competition/current-competition/scores) and download the Round 1 Final Scores `.xlsx` file provided by AFA CyberPatriot.
+   - Visit the [CyberPatriot scores page](https://www.uscyberpatriot.org/competition-scores/) and download the Round 1 Final Scores `.xlsx` file provided by AFA CyberPatriot.
 
 2. **Convert to CSV**
    - Convert the `.xlsx` file to `.csv` using a tool like [freeconvert.com](https://www.freeconvert.com).
